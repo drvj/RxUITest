@@ -28,7 +28,8 @@ namespace RxUITest
 		// Shared initialization code
 		void Initialize ()
 		{
-			var viewModel = new TestViewModel ();
+			var vm = new TestViewModel ();
+			vm.List = new ReactiveList<string> ();
 		}
 
 		#endregion
@@ -36,6 +37,10 @@ namespace RxUITest
 
 	public class TestViewModel : ReactiveObject
 	{
+		public ReactiveList<string> List {
+			get;
+			set;
+		}
 	}
 }
 
